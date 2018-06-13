@@ -30,7 +30,7 @@ public class Conductor {
 	private double valoracionMedia = 0d;
 	
 	@Column(name="co_ocupado", columnDefinition="TINYINT")
-	private boolean ocupado = false;
+	private int ocupado = 0;
 	
 	@Transient
 	private ArrayList<Byte> valoraciones = new ArrayList<>();
@@ -105,12 +105,11 @@ public class Conductor {
 		return this.valoracionMedia;
 	}
 	
-	public void setOcupado(Boolean ocupado){
-		this.ocupado = ocupado;
-	}
-	
-	public boolean isOcupado(){
-		return this.ocupado;
+
+	public Boolean isOcupado(){
+		if(this.ocupado == 0) {
+		return false;}
+		else{return true;}
 	}
 
 	public String getTarjeta() {
@@ -129,4 +128,10 @@ public class Conductor {
 		this.carreras = carreras;
 	}
 
+	public void setOcupado(Boolean i) {
+		if (i) {
+		this.ocupado=1;
+	} else {this.ocupado=0;}
+
+	}
 }

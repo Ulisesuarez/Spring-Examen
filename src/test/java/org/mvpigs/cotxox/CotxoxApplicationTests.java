@@ -152,12 +152,10 @@ public class CotxoxApplicationTests {
 
 	@Test
 	public void test_save_conductor() {
-		
-		/**
+				/**
 		 * Escriu aqui el codi per a crear les conductores 
 		 * i escriure-les a la base de dades
 		 */
-
 		conductorService.crearConductor("2222222222222222","Sabrina", "5DHJ444", "Toyota Prius");
 		conductorService.crearConductor("3333333333333333","Cici", "7JKK555", "Mercedes A");
 		Assert.assertEquals("Sabrina", conductorService.recuperarConductor("2222222222222222").getNombre());
@@ -192,6 +190,9 @@ public class CotxoxApplicationTests {
 	 public void test_post_construct_servei_conductor() {
 		
 		conductorService.init();
+
+		//conductorService.crearConductor("2222222222222222","Sabrina", "5DHJ444", "Toyota Prius");
+		//conductorService.crearConductor("3333333333333333","Cici", "7JKK555", "Mercedes A");
 
 		Assert.assertEquals("Sabrina", conductorService.recuperarConductor("2222222222222222").getNombre());
 		Assert.assertEquals(false,conductorService.recuperarConductor("2222222222222222").isOcupado());
