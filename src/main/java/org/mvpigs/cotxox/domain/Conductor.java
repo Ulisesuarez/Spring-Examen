@@ -29,7 +29,7 @@ public class Conductor {
 	@Column(name="co_valoracion_media")
 	private double valoracionMedia = 0d;
 	
-	@Column(name="co_ocupado")
+	@Column(name="co_ocupado", columnDefinition="TINYINT")
 	private boolean ocupado = false;
 	
 	@Transient
