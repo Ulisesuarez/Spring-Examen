@@ -52,7 +52,7 @@ public class ConductorService {
 
 	public Conductor recuperarConductorLibre() {
 		
-		//return conductorRepo.findByOcupado(0).get(0);
-	return null;}
+		return conductorRepo.findByOcupado(0).get(0);
+	}
 
 }
