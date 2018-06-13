@@ -19,6 +19,14 @@ public class ConductorService {
 		// TODO Auto-generated method stub
 		
 	}
+	public void crearConductor( String id, String nombre, String matricula, String modelo) {
+		Conductor conductor =new Conductor(id);
+		conductor.setNombre(nombre);
+		conductor.setMatricula(matricula);
+		conductor.setModelo(modelo);
+		conductorRepo.save(conductor);
+	}
+	
 
 	public Conductor recuperarConductorLibre() {
 		// TODO Auto-generated method stub

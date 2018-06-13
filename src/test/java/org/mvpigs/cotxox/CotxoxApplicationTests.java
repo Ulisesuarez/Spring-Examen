@@ -158,6 +158,8 @@ public class CotxoxApplicationTests {
 		 * i escriure-les a la base de dades
 		 */
 
+		conductorService.crearConductor("2222222222222222","Sabrina", "5DHJ444", "Toyota Prius");
+		conductorService.crearConductor("3333333333333333","Cici", "7JKK555", "Mercedes A");
 		Assert.assertEquals("Sabrina", conductorService.recuperarConductor("2222222222222222").getNombre());
 		Assert.assertEquals("Cici", conductorService.recuperarConductor("3333333333333333").getNombre());
 		
