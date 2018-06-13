@@ -1,7 +1,8 @@
 package org.mvpigs.cotxox.service;
 
 import org.mvpigs.cotxox.domain.Carrera;
-
+import org.springframework.stereotype.Service;
+@Service
 public class CarreraService {
 
 	public Long crearCarrera(String string, String string2, String string3, int i, int j) {

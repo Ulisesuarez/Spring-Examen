@@ -3,12 +3,10 @@ package org.mvpigs.cotxox.repo;
 import java.util.List;
 
 import org.mvpigs.cotxox.domain.Conductor;
+import org.springframework.data.repository.CrudRepository;
 
-public class ConductorRepo {
+public interface ConductorRepo extends CrudRepository<Conductor, String>{
 
-	public List<Conductor> findByOcupado(int i) {
-		// TODO Auto-generated method stub
-		return null;
-	}
+	public List<Conductor> findByOcupado(int i);
 
 }
