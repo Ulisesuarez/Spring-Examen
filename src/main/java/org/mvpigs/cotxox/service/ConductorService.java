@@ -1,6 +1,8 @@
 package org.mvpigs.cotxox.service;
 
 
+import java.util.List;
+
 import javax.annotation.PostConstruct;
 
 import org.mvpigs.cotxox.domain.Conductor;
@@ -51,8 +53,12 @@ public class ConductorService {
 	
 
 	public Conductor recuperarConductorLibre() {
+		List<Conductor> condlist=conductorRepo.findByOcupado(0);
 		
-		return conductorRepo.findByOcupado(0).get(0);
+		if(condlist.isEmpty()) {
+			return null;
+		} else {
+		return condlist.get(0);
 	}
-
+	}
 }

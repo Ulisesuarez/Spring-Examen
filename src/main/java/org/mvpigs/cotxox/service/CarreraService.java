@@ -25,7 +25,7 @@ public class CarreraService {
 	}
 
 	public void updateCarrera(Carrera carrera) {
-		// TODO Auto-generated method stub
+		carreraRepo.updateConductor(carrera.getConductor(),carrera.getId());
 		
 	}
 
