@@ -13,8 +13,6 @@ import javax.persistence.Transient;
 @Entity
 @Table(name="t_conductores")
 public class Conductor {
-	/*"create table t_conductores (co_tarjeta_credito varchar(255) not null, co_nombre varchar(255), co_modelo varchar(255), 
-	 * co_matricula varchar(255), co_valoracion_media double, co_ocupado TINYINT,  primary key (co_tarjeta_credito))",*/
 	
 	@Id @Column(name="co_tarjeta_credito")
 	private String tarjeta;
